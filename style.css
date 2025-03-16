@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.since-date {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d81b60;
+    margin-top: 10px;
+}
+
+/* Container principal */
+.container {
+    max-width: 400px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Título e subtítulo */
+.title {
+    font-size: 36px;
+    font-family: 'Great Vibes', cursive;
+    color: #d81b60;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 400;
+    color: #222;
+}
+
+/* Contador de tempo */
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.countdown-box {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    width: 80px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-label {
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Imagem */
+.photo {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilizando o botão */
+.btn {
+    background: #d81b60;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #b71550;
+}
+
+/* Responsividade - Ajustes para celulares */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .countdown-box {
+        width: 70px;
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Estilizando o iframe para vídeo */
+iframe {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos dos corações */
+.heart {
+    position: fixed;
+    font-size: 24px;
+    color: red;
+    animation: fall 4s linear forwards;
+    opacity: 0.8;
+}
+
+
+
+/* Estilização do botão Play/Pause */
+#playPauseButton {
+    background: #d81b60;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#playPauseButton.playing {
+    background: #d81b60;
+    box-shadow: 0px 6px 15px rgba(216, 27, 96, 0.4);
+}
+
+/* Animação dos corações caindo */
+@keyframes fall {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50vh) translateX(calc(-50px + 100px * random()));
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) translateX(calc(-100px + 200px * random())) scale(0.5);
+        opacity: 0;
+    }
+}

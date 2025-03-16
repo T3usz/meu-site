@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para o seu Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">Mateus & Ester</div>
+        <div class="subtitle" id="message"></div>
+        <img src="casal.jpg" alt="Casal" class="photo">
+        
+        <div class="subtitle">Compartilhando momentos há:</div>
+        <div class="countdown-container">
+            <div class="countdown-box" id="anos">0<span class="countdown-label">anos</span></div>
+            <div class="countdown-box" id="meses">0<span class="countdown-label">meses</span></div>
+            <div class="countdown-box" id="dias">0<span class="countdown-label">dias</span></div>
+            <div class="countdown-box" id="horas">0<span class="countdown-label">horas</span></div>
+            <div class="countdown-box" id="minutos">0<span class="countdown-label">mins</span></div>
+            <div class="countdown-box" id="segundos">0<span class="countdown-label">segs</span></div>
+        </div>
+
+        <div class="since-date">Desde <span id="dataInicioTexto"></span></div>
+
+        <div class="subtitle">Nossa música:</div>
+        <button class="btn" id="playPauseButton">▶️ Play</button>
+
+        <button class="btn btn-love" id="loveButton">Te Amo Amor ❤️</button>
+    </div>
+
+    <!-- Player oculto do YouTube -->
+    <div id="player" style="display: none;"></div>
+
+    <!-- Importando o JavaScript separado -->
+    <script src="script.js"></script>
+
+</body>
+</html>
